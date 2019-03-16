@@ -1,4 +1,4 @@
-﻿package tech.blur.ctfbackend.repositories;
+package tech.blur.ctfbackend.repositories;
 
 import tech.blur.ctfbackend.api.Resources;
 import tech.blur.ctfbackend.models.RecoveryKey;
@@ -48,14 +48,14 @@ public class InMemoryUserRepository implements UserRepository {
         userCache.put(Integer.toString(i), new User(Integer.toString(i++), "inf_lim", "gwrgbrbsfb", "inf≠lim", 0));
         userCache.put(Integer.toString(i), new User(Integer.toString(i++), "Los_Pollitos", "svlsvlervd", "Los Pollitos", 0));
         userCache.put(Integer.toString(i), new User(Integer.toString(i++), "D34", "poiremgioe", "D34ᵗʰ", 0));
-	userCache.put(Integer.toString(i), new User(Integer.toString(i++), "4N1m3.go.Nо", "sdnlfnsdff", "4N1m3.go.Nо", 0));
+        userCache.put(Integer.toString(i), new User(Integer.toString(i++), "4N1m3.go.Nо", "sdnlfnsdff", "4N1m3.go.Nо", 0));
         fillUserLoginPassCache();
 
 
         //userLoginPass.put(new UserLoginPass("MacOSO", "verystrongpassword"), userCache.get("1"));
         //userLoginPass.put(new UserLoginPass("SrgGrch", "qwer2017"), userCache.get("2"));
     }
-    
+
     private void fillUserLoginPassCache(){
         for (int i = 1; i <= userCache.size(); i++){
             userLoginPass.put(new UserLoginPass(userCache.get(Integer.toString(i)).getLogin(),
