@@ -20,6 +20,7 @@ public class InMemoryUserRepository implements UserRepository {
 
     private final String RECOVERY_KEY = "agDzPnj9YmgL4FB3GS8m";
 
+
     public InMemoryUserRepository() {
         int i = 1;
         userCache.put(Integer.toString(i), new User(Integer.toString(i++), "MacOSO", "verystrongpassword", "Саша",  0));
